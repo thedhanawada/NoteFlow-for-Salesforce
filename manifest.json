@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "NoteFlow for Salesforce",
+    "version": "1.3",
+    "description": "A quick and easy note-taking tool for Salesforce.",
+    "permissions": ["activeTab", "storage", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "32": "icon32.png",
+        "128": "icon128.png"
+      }
+    },
+    "icons": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "128": "icon128.png"
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "*://*.salesforce.com/*",
+          "*://*.force.com/*"
+        ],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
